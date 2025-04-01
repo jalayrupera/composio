@@ -26,6 +26,7 @@ class App(Enum[AppData], metaclass=EnumGenerator):
     ACCULYNX: "App"
     ACTIVE_CAMPAIGN: "App"
     ADOBE: "App"
+    ADVANCED_RAG_TOOL: "App"
     AERO_WORKFLOW: "App"
     AFFINITY: "App"
     AGENCYZOOM: "App"

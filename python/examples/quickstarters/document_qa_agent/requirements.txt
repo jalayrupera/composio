@@ -1,0 +1,16 @@
+# composio-crewai
+crewai
+langchain-community
+langchain-text-splitters
+python-dotenv
+embedchain
+chromadb
+google-generativeai
+google.genai
+grpcio-tools
+sentence-transformers
+# Document processing requirements
+pypdf
+python-docx
+unstructured
+pathlib

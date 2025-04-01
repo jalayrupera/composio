@@ -13,36 +13,21 @@ This Document QA Agent processes documents (PDFs, DOCXs, or folders of documents
 
 ## Setup
 
-1. Install the required dependencies:
+This agent requires components from the local `composio` development codebase. To set up the environment, run:
 
 ```bash
-pip install -r requirements.txt
+./setup.sh
 ```
 
-2. Set up your environment variables in a `.env` file:
+This script will:
+1. Create and activate a virtual environment
+2. Install dependencies from `requirements.txt`
+3. Install required local `composio` and `composio-crewai` packages
+4. Set up the `.env` file template
 
-```
-GEMINI_API_KEY=your_gemini_api_key_here
-# COMPOSIO_API_KEY=your_composio_key_here (if needed by tools)
-```
+You'll need to add your `GEMINI_API_KEY`, `COMPOSIO_API_KEY` to the created `.env` file before running the agent.
 
-## Local Development Setup (Using Local Composio Code)
-
-If you are developing the main `composio` package or the `composio-crewai` plugin and want this example to use your *latest local changes* instead of the versions specified in `requirements.txt` or installed from PyPI, follow these steps **after** activating the virtual environment (`source venv/bin/activate`):
-
-1.  **Navigate to the Project Root:**
-    Ensure you are in the main project directory (`/Users/username/composio`).
-
-2.  **Install Local Packages:**
-    Run the following commands to build and install the `composio` core package and the `composio-crewai` plugin from your local source code into the example's active virtual environment:
-    ```bash
-    pip install ./python/
-    pip install ./python/plugins/crew_ai
-    ```
-
-    **Important:** This installation method copies the code at the time of installation. If you make further changes to the code in `./python/` or `./python/plugins/crew_ai/`, you **must re-run** these `pip install` commands to update the versions used by this example.
-
-Now, when you run `python main.py` from the `python/examples/quickstarters/document_qa_agent/` directory (with the venv active), it will use the locally built versions of `composio` and `composio-crewai`.
+**Note:** If you modify the `composio` core or plugin code, re-run `./setup.sh` to update the installed packages.
 
 ## Usage
 

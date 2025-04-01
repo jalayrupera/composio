@@ -54,8 +54,8 @@ def get_document_type(path: str) -> str:
         return "pdf"
     elif file_extension == ".docx":
         return "docx"
-    elif file_extension in [".txt", ".md", ".py", ".js", ".html", ".css", ".json"]:
-        return "txt"
+    elif file_extension == ".md":
+        return "md"
     else:
         return "txt"
 
